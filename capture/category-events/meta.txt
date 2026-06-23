@@ -1,0 +1,31 @@
+{
+  "title": "Events – Logos BZ",
+  "description": null,
+  "canonical": "https://logosbz.com/category/events/",
+  "robots": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "viewport": "width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover",
+  "og": {
+    "og:locale": "en_US",
+    "og:type": "article",
+    "og:title": "Events – Logos BZ",
+    "og:url": "https://logosbz.com/category/events/",
+    "og:site_name": "Lógos BZ",
+    "og:image": "https://logosbz.com/wp-content/uploads/2025/03/20190911_UConn-Rec-Cntr_30_edit_2.webp",
+    "og:image:secure_url": "https://logosbz.com/wp-content/uploads/2025/03/20190911_UConn-Rec-Cntr_30_edit_2.webp",
+    "og:image:width": "900",
+    "og:image:height": "600",
+    "og:image:alt": "Construction Support Services",
+    "og:image:type": "image/webp"
+  },
+  "twitter": {
+    "twitter:card": "summary_large_image",
+    "twitter:title": "Events – Logos BZ",
+    "twitter:image": "https://logosbz.com/wp-content/uploads/2025/03/20190911_UConn-Rec-Cntr_30_edit_2.webp",
+    "twitter:label1": "Posts",
+    "twitter:data1": "1"
+  },
+  "analytics": [
+    "https://www.googletagmanager.com/gtag/js?id=G-N9QM2QZ47K",
+    "G-N9QM2QZ47K"
+  ]
+}
