@@ -15,17 +15,17 @@
       "value": "GA1.1.193110689.1782232217",
       "domain": ".logosbz.com",
       "path": "/",
-      "expires": 1816792362.437843,
+      "expires": 1816793384.938774,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_ga_N9QM2QZ47K",
-      "value": "GS2.1.s1782232217$o1$g1$t1782232362$j60$l0$h0",
+      "value": "GS2.1.s1782232217$o1$g1$t1782233384$j60$l0$h0",
       "domain": ".logosbz.com",
       "path": "/",
-      "expires": 1816792362.436749,
+      "expires": 1816793384.93816,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
