@@ -1,0 +1,36 @@
+{
+  "title": "Lógos BZ – Designing Your Future",
+  "description": "At Lógos BZ, every day, we are driven to improve outcomes for patients, healthcare providers, families, and communities.",
+  "canonical": "https://logosbz.com/",
+  "robots": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "viewport": "width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover",
+  "og": {
+    "og:locale": "en_US",
+    "og:type": "website",
+    "og:title": "Lógos BZ – Designing Your Future",
+    "og:description": "At Lógos BZ, every day, we are driven to improve outcomes for patients, healthcare providers, families, and communities.",
+    "og:url": "https://logosbz.com/",
+    "og:site_name": "Lógos BZ",
+    "og:updated_time": "2026-06-09T23:13:02+00:00",
+    "og:image": "https://logosbz.com/wp-content/uploads/2025/03/20190911_UConn-Rec-Cntr_30_edit_2.webp",
+    "og:image:secure_url": "https://logosbz.com/wp-content/uploads/2025/03/20190911_UConn-Rec-Cntr_30_edit_2.webp",
+    "og:image:width": "900",
+    "og:image:height": "600",
+    "og:image:alt": "Construction Support Services",
+    "og:image:type": "image/webp"
+  },
+  "twitter": {
+    "twitter:card": "summary_large_image",
+    "twitter:title": "Lógos BZ – Designing Your Future",
+    "twitter:description": "At Lógos BZ, every day, we are driven to improve outcomes for patients, healthcare providers, families, and communities.",
+    "twitter:image": "https://logosbz.com/wp-content/uploads/2025/03/20190911_UConn-Rec-Cntr_30_edit_2.webp",
+    "twitter:label1": "Written by",
+    "twitter:data1": "muntzdesigns@gmail.com",
+    "twitter:label2": "Time to read",
+    "twitter:data2": "3 minutes"
+  },
+  "analytics": [
+    "https://www.googletagmanager.com/gtag/js?id=G-N9QM2QZ47K",
+    "G-N9QM2QZ47K"
+  ]
+}

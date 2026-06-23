@@ -24,6 +24,13 @@ const { execSync } = require('child_process');
 
 const SEGMENT_MAX = 1500;      // max CSS px height per scroll segment
 const DOWNSCALE_MAX = 1500;    // longest side cap for any saved screenshot
+const STATE = path.join(__dirname, '.auth', 'state.json'); // persisted SiteGround clearance cookie
+
+function ctxBase() {
+  const o = { ignoreHTTPSErrors: true, deviceScaleFactor: 1 };
+  if (fs.existsSync(STATE)) o.storageState = STATE;
+  return o;
+}
 
 function sh(cmd) {
   try { return execSync(cmd, { stdio: ['ignore', 'pipe', 'pipe'] }).toString(); }
@@ -273,7 +280,7 @@ async function run() {
   const browser = await chromium.launch();
 
   // ---------- DESKTOP ----------
-  const ctxD = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1, ignoreHTTPSErrors: true });
+  const ctxD = await browser.newContext({ ...ctxBase(), viewport: { width: 1440, height: 900 } });
   const pageD = await ctxD.newPage();
   console.log(`[capture] DESKTOP ${url}`);
   await gotoResolved(pageD, url);
@@ -303,7 +310,7 @@ async function run() {
   await ctxD.close();
 
   // ---------- MOBILE ----------
-  const ctxM = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, isMobile: true, hasTouch: true, ignoreHTTPSErrors: true });
+  const ctxM = await browser.newContext({ ...ctxBase(), viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
   const pageM = await ctxM.newPage();
   console.log(`[capture] MOBILE ${url}`);
   await gotoResolved(pageM, url);
