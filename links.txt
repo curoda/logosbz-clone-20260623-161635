@@ -1,0 +1,42 @@
+# Master link inventory for logosbz.com clone
+# Format: SCOPE  URL  [notes]
+
+## INTERNAL PAGES (same domain — in scope, captured)
+INTERNAL  https://logosbz.com/
+INTERNAL  https://logosbz.com/about/
+INTERNAL  https://logosbz.com/about/areas-of-expertise/
+INTERNAL  https://logosbz.com/about/ethics-and-values/
+INTERNAL  https://logosbz.com/services/
+INTERNAL  https://logosbz.com/services/architecture-engineering/
+INTERNAL  https://logosbz.com/services/real-estate-development/
+INTERNAL  https://logosbz.com/services/advisory-services/
+INTERNAL  https://logosbz.com/our-proejcts/
+INTERNAL  https://logosbz.com/testing-project/
+INTERNAL  https://logosbz.com/news/
+INTERNAL  https://logosbz.com/logos-makes-strategic-hire-in-jay-pelton-to-lead-architecture-practice/
+INTERNAL  https://logosbz.com/the-future-of-engineering-trends-shaping-the-next-decade/
+INTERNAL  https://logosbz.com/how-emerging-technologies-are-transforming-engineering-design/
+INTERNAL  https://logosbz.com/our-people/
+INTERNAL  https://logosbz.com/our-people/mitch-patterson/
+INTERNAL  https://logosbz.com/careers/
+INTERNAL  https://logosbz.com/contact/
+INTERNAL  https://logosbz.com/category/uncategorized/
+INTERNAL  https://logosbz.com/category/press/
+INTERNAL  https://logosbz.com/category/events/
+INTERNAL  https://logosbz.com/category/news/
+INTERNAL  https://logosbz.com/category/projects/
+
+## EXTERNAL LINKS (other domains — recorded exactly, NOT followed)
+EXTERNAL  https://www.linkedin.com/company/logosbz/
+EXTERNAL  https://www.linkedin.com/in/charleswmalone/
+EXTERNAL  https://www.linkedin.com/in/mitch-patterson-b4b3b811/
+EXTERNAL  mailto:cmalone@logosbz.com
+EXTERNAL  mailto:jpelton@logosbz.com
+EXTERNAL  mailto:mpatterson@logosbz.com
+EXTERNAL  tel:+12672433556
+EXTERNAL  tel:301.802.6262
+
+## SPECIAL / NON-NAVIGATION HREFS observed
+#main           (skip-to-content anchor)
+#ct-popup-1077  (Web Accessibility popup trigger — opens on-page modal)
+#               (Privacy Policy link — href="#", no target page)
