@@ -66,6 +66,39 @@ def inject_fallback(html):
         return html.replace('</body>', FALLBACK + '\n</body>')
     return html + FALLBACK
 
+def remove_stale_slideshow(html):
+    """Remove the pre-rendered (frozen) Elementor background-slideshow Swiper DOM.
+
+    The capture engine recorded the DOM *after* the original's JS had already built
+    and initialized the Swiper. That captured DOM has no live Swiper instance on the
+    clone, so it shows a single frozen frame. Elementor's frontend JS rebuilds a fresh,
+    live, auto-advancing slideshow from the container's data-settings on load; the stale
+    copy would otherwise remain stacked on top and hide the animation. We strip the stale
+    `.elementor-background-slideshow` subtree (balanced <div> scan) so exactly one live
+    slideshow is created. The rest of the HTML is left byte-identical.
+    """
+    marker = '<div class="elementor-background-slideshow swiper'
+    removed = 0
+    while True:
+        start = html.find(marker)
+        if start == -1:
+            break
+        depth = 0
+        end = None
+        for m in re.finditer(r'<div\b|</div>', html[start:], re.IGNORECASE):
+            if m.group().lower().startswith('<div'):
+                depth += 1
+            else:
+                depth -= 1
+                if depth == 0:
+                    end = start + m.end()
+                    break
+        if end is None:
+            break  # malformed; leave as-is rather than corrupt
+        html = html[:start] + html[end:]
+        removed += 1
+    return html, removed
+
 count = 0
 for slug, url in pages:
     src = os.path.join(ROOT, 'capture', slug, 'page.html')
@@ -74,6 +107,7 @@ for slug, url in pages:
     html = open(src, encoding='utf-8').read()
     html = localize(html)
     html = restore_meta(html)
+    html, n_slideshow = remove_stale_slideshow(html)
     html = inject_fallback(html)
     # output path from url
     path = url.replace('https://logosbz.com/', '')
@@ -84,6 +118,6 @@ for slug, url in pages:
     os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, 'w', encoding='utf-8').write(html)
     count += 1
-    print(f'built {slug:35s} -> {os.path.relpath(out, SITE)}')
+    print(f'built {slug:35s} -> {os.path.relpath(out, SITE)}' + (f'  [stripped {n_slideshow} stale slideshow]' if n_slideshow else ''))
 
 print(f'\n[build] {count} pages written')
