@@ -11,21 +11,21 @@
       "sameSite": "Lax"
     },
     {
-      "name": "_ga_N9QM2QZ47K",
-      "value": "GS2.1.s1782232217$o1$g0$t1782232217$j60$l0$h0",
+      "name": "_ga",
+      "value": "GA1.1.193110689.1782232217",
       "domain": ".logosbz.com",
       "path": "/",
-      "expires": 1816792217.254028,
+      "expires": 1816792362.437843,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
-      "name": "_ga",
-      "value": "GA1.1.193110689.1782232217",
+      "name": "_ga_N9QM2QZ47K",
+      "value": "GS2.1.s1782232217$o1$g1$t1782232362$j60$l0$h0",
       "domain": ".logosbz.com",
       "path": "/",
-      "expires": 1816792217.254683,
+      "expires": 1816792362.436749,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
