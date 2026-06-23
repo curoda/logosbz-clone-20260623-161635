@@ -39,6 +39,41 @@ the triangle-pattern CTA, and the SDVOSB/VSBE footer badges.
 No HIGH (missing/wrong images, broken layout/nav, missing pages/embeds) and no
 MEDIUM (wrong fonts/colors/sizes/weights/link targets, missing metadata) issues found.
 
+## Hero slideshow fix (post-launch)
+**Symptom:** the homepage hero showed a single frozen frame instead of the original's
+auto-advancing Ken-Burns slideshow.
+
+**Root cause:** the hero is an Elementor container with native `background_background:
+"slideshow"` (4 images, fade 1000ms, 5000ms/slide, loop, Ken-Burns zoom-in), driven by
+Elementor's frontend JS. Elementor loads its actual handler code (`background-slideshow`,
+`nested-tabs`, …) as **webpack chunks whose hashed filenames are computed in JS at
+runtime**. `mirror.js` only scanned static `<script>/<link>/CSS` references, so it never
+saw these chunks → they 404'd on the clone → `elementorModules is not defined` → the
+slideshow/tab handlers never ran. Compounding it, the captured DOM already contained a
+fully-built but **instance-less** Swiper (the original's runtime artifact, incl. loop
+`swiper-slide-duplicate` clones); with no live Swiper and no working handler, that frozen
+copy was all that showed.
+
+**Fix (real mechanism, not faked):**
+1. `mirror_dynamic.js` loads representative original pages in a real browser, records every
+   runtime JS request (including dynamic imports), and downloads the 5 missing chunks:
+   `shared-frontend-handlers.*`, `nested-tabs.*`, `nested-title-keyboard-handler.*`,
+   `text-editor.*`, and Blocksy `907.*.js`.
+2. `build_pages.py` strips the stale pre-rendered `.elementor-background-slideshow` subtree
+   so Elementor builds exactly **one** live Swiper from the container's `data-settings`.
+
+After the fix, the live clone runs a real Elementor/Swiper instance: `autoplay.running =
+true`, `realIndex` advances 0→1→2, fade + Ken-Burns zoom intact — identical mechanism,
+timing, and effect to the original. The Areas-of-Expertise nested tabs (same chunk family)
+also initialize correctly now. Elementor/Blocksy 404s went from 5 to 0.
+
+**Deploy:** committed + pushed to GitHub; the repo is linked to Vercel (root dir `site/`,
+production branch `main`), so the push triggered a fresh **git build** (source=`git`,
+commit `2cc89d0`) — not a Vercel redeploy.
+
+**Note:** an external commit had changed the hero button to "my names ben"; the rebuild
+restored the faithful original text **"Discover Logos"**.
+
 ## Manual-handling list (dynamic features not reproducible on a static host)
 1. **Header search** (`.ct-search-form`, magnifying-glass icon): the overlay opens and
    the input works, but submitting (GET `?s=`) and the AJAX live-results
