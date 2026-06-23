@@ -1,0 +1,36 @@
+{
+  "title": "How Emerging Technologies Are Transforming Engineering Design – Logos BZ",
+  "description": "Emerging technologies are reshaping the way engineers approach design, offering exciting new possibilities for innovation and efficiency.",
+  "canonical": "https://logosbz.com/how-emerging-technologies-are-transforming-engineering-design/",
+  "robots": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "viewport": "width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover",
+  "og": {
+    "og:locale": "en_US",
+    "og:type": "article",
+    "og:title": "How Emerging Technologies Are Transforming Engineering Design – Logos BZ",
+    "og:description": "Emerging technologies are reshaping the way engineers approach design, offering exciting new possibilities for innovation and efficiency.",
+    "og:url": "https://logosbz.com/how-emerging-technologies-are-transforming-engineering-design/",
+    "og:site_name": "Lógos BZ",
+    "og:updated_time": "2025-03-12T15:37:08+00:00",
+    "og:image": "https://logosbz.com/wp-content/uploads/2025/02/Capital-Health-Replacement-Hospital.webp",
+    "og:image:secure_url": "https://logosbz.com/wp-content/uploads/2025/02/Capital-Health-Replacement-Hospital.webp",
+    "og:image:width": "1100",
+    "og:image:height": "733",
+    "og:image:alt": "Healthcare Planning",
+    "og:image:type": "image/webp"
+  },
+  "twitter": {
+    "twitter:card": "summary_large_image",
+    "twitter:title": "How Emerging Technologies Are Transforming Engineering Design – Logos BZ",
+    "twitter:description": "Emerging technologies are reshaping the way engineers approach design, offering exciting new possibilities for innovation and efficiency.",
+    "twitter:image": "https://logosbz.com/wp-content/uploads/2025/02/Capital-Health-Replacement-Hospital.webp",
+    "twitter:label1": "Written by",
+    "twitter:data1": "muntzdesigns@gmail.com",
+    "twitter:label2": "Time to read",
+    "twitter:data2": "1 minute"
+  },
+  "analytics": [
+    "https://www.googletagmanager.com/gtag/js?id=G-N9QM2QZ47K",
+    "G-N9QM2QZ47K"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "The Future Of Engineering: Trends Shaping The Next Decade – Logos BZ",
+  "description": "As we look ahead to the next decade, engineering is poised for significant transformation.",
+  "canonical": "https://logosbz.com/the-future-of-engineering-trends-shaping-the-next-decade/",
+  "robots": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "viewport": "width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover",
+  "og": {
+    "og:locale": "en_US",
+    "og:type": "article",
+    "og:title": "The Future Of Engineering: Trends Shaping The Next Decade – Logos BZ",
+    "og:description": "As we look ahead to the next decade, engineering is poised for significant transformation.",
+    "og:url": "https://logosbz.com/the-future-of-engineering-trends-shaping-the-next-decade/",
+    "og:site_name": "Lógos BZ",
+    "og:updated_time": "2025-03-12T15:36:00+00:00",
+    "og:image": "https://logosbz.com/wp-content/uploads/2025/02/Architecture.webp",
+    "og:image:secure_url": "https://logosbz.com/wp-content/uploads/2025/02/Architecture.webp",
+    "og:image:width": "1100",
+    "og:image:height": "733",
+    "og:image:alt": "Careers at Lógos BZ",
+    "og:image:type": "image/webp"
+  },
+  "twitter": {
+    "twitter:card": "summary_large_image",
+    "twitter:title": "The Future Of Engineering: Trends Shaping The Next Decade – Logos BZ",
+    "twitter:description": "As we look ahead to the next decade, engineering is poised for significant transformation.",
+    "twitter:image": "https://logosbz.com/wp-content/uploads/2025/02/Architecture.webp",
+    "twitter:label1": "Written by",
+    "twitter:data1": "muntzdesigns@gmail.com",
+    "twitter:label2": "Time to read",
+    "twitter:data2": "1 minute"
+  },
+  "analytics": [
+    "https://www.googletagmanager.com/gtag/js?id=G-N9QM2QZ47K",
+    "G-N9QM2QZ47K"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Lógos Makes Strategic Hire In Jay Pelton To Lead Architecture Practice – Logos BZ",
+  "description": "Lógos is announcing a pivotal hire, sparking growth in the company’s Architectural and Engineering (A&E) practice supporting its federal and commercial sectors.",
+  "canonical": "https://logosbz.com/logos-makes-strategic-hire-in-jay-pelton-to-lead-architecture-practice/",
+  "robots": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "viewport": "width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover",
+  "og": {
+    "og:locale": "en_US",
+    "og:type": "article",
+    "og:title": "Lógos Makes Strategic Hire In Jay Pelton To Lead Architecture Practice – Logos BZ",
+    "og:description": "Lógos is announcing a pivotal hire, sparking growth in the company’s Architectural and Engineering (A&E) practice supporting its federal and commercial sectors.",
+    "og:url": "https://logosbz.com/logos-makes-strategic-hire-in-jay-pelton-to-lead-architecture-practice/",
+    "og:site_name": "Lógos BZ",
+    "og:updated_time": "2026-06-03T15:31:57+00:00",
+    "og:image": "https://logosbz.com/wp-content/uploads/2025/02/2018_11_08_LPTamwa02_B.webp",
+    "og:image:secure_url": "https://logosbz.com/wp-content/uploads/2025/02/2018_11_08_LPTamwa02_B.webp",
+    "og:image:width": "1100",
+    "og:image:height": "733",
+    "og:image:alt": "Lógos Makes Strategic Hire in Jay Pelton to Lead Architecture Practice",
+    "og:image:type": "image/webp"
+  },
+  "twitter": {
+    "twitter:card": "summary_large_image",
+    "twitter:title": "Lógos Makes Strategic Hire In Jay Pelton To Lead Architecture Practice – Logos BZ",
+    "twitter:description": "Lógos is announcing a pivotal hire, sparking growth in the company’s Architectural and Engineering (A&E) practice supporting its federal and commercial sectors.",
+    "twitter:image": "https://logosbz.com/wp-content/uploads/2025/02/2018_11_08_LPTamwa02_B.webp",
+    "twitter:label1": "Written by",
+    "twitter:data1": "muntzdesigns@gmail.com",
+    "twitter:label2": "Time to read",
+    "twitter:data2": "2 minutes"
+  },
+  "analytics": [
+    "https://www.googletagmanager.com/gtag/js?id=G-N9QM2QZ47K",
+    "G-N9QM2QZ47K"
+  ]
+}

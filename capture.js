@@ -26,8 +26,13 @@ const SEGMENT_MAX = 1500;      // max CSS px height per scroll segment
 const DOWNSCALE_MAX = 1500;    // longest side cap for any saved screenshot
 const STATE = path.join(__dirname, '.auth', 'state.json'); // persisted SiteGround clearance cookie
 
+// Realistic UA + automation flag off so we pass Vercel's bot "Security Checkpoint".
+const UA_DESKTOP = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36';
+const UA_MOBILE = 'Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36';
+const LAUNCH_ARGS = ['--disable-blink-features=AutomationControlled'];
+
 function ctxBase() {
-  const o = { ignoreHTTPSErrors: true, deviceScaleFactor: 1 };
+  const o = { ignoreHTTPSErrors: true, deviceScaleFactor: 1, locale: 'en-US' };
   if (fs.existsSync(STATE)) o.storageState = STATE;
   return o;
 }
@@ -58,11 +63,10 @@ function downscaleAndReport(file) {
 }
 
 async function waitForCaptcha(page) {
-  // SiteGround proof-of-work challenge resolves itself via JS, then redirects.
-  for (let i = 0; i < 40; i++) {
+  // SiteGround PoW challenge AND Vercel "Security Checkpoint" both resolve via JS.
+  for (let i = 0; i < 45; i++) {
     const t = await page.title().catch(() => '');
-    if (!/Robot Challenge|Loading https/i.test(t) && t !== '') return true;
-    // If still on challenge or loading, keep waiting for the redirect.
+    if (t !== '' && !/Robot Challenge|Loading https|Security Checkpoint/i.test(t)) return true;
     await page.waitForTimeout(1000);
   }
   return false;
@@ -277,10 +281,10 @@ async function run() {
   if (!url || !outDir) { console.error('Usage: node capture.js <url> <outDir>'); process.exit(1); }
   fs.mkdirSync(outDir, { recursive: true });
 
-  const browser = await chromium.launch();
+  const browser = await chromium.launch({ args: LAUNCH_ARGS });
 
   // ---------- DESKTOP ----------
-  const ctxD = await browser.newContext({ ...ctxBase(), viewport: { width: 1440, height: 900 } });
+  const ctxD = await browser.newContext({ ...ctxBase(), viewport: { width: 1440, height: 900 }, userAgent: UA_DESKTOP });
   const pageD = await ctxD.newPage();
   console.log(`[capture] DESKTOP ${url}`);
   await gotoResolved(pageD, url);
@@ -310,7 +314,7 @@ async function run() {
   await ctxD.close();
 
   // ---------- MOBILE ----------
-  const ctxM = await browser.newContext({ ...ctxBase(), viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+  const ctxM = await browser.newContext({ ...ctxBase(), viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, userAgent: UA_MOBILE });
   const pageM = await ctxM.newPage();
   console.log(`[capture] MOBILE ${url}`);
   await gotoResolved(pageM, url);
